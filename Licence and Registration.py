@@ -4,6 +4,7 @@ a = 0
 b = 0
 m = int(500)
 randEvent = ["Hitch-hiker", "Police", "Roadwork", "Traffic", "Nothing"]
+RandEventPolice = ["Caught, Escaped"]
 print ("you have", m, "money")
 
 while i==0:
@@ -21,8 +22,6 @@ while i==0:
             print ("you have", m, "money remaining")
             print (m , a)
 
-        else:
-            print("error")
 
             
     elif a > 0:
@@ -30,9 +29,6 @@ while i==0:
         
     elif choice_1a == "no":
            print ("you still have", m, "money remaining")
-
-    else:
-        print("error")
 
 
 
@@ -73,13 +69,13 @@ while i==0:
         i += 0
 
 h = 0
-j = 0
 
 while h == 0:
+    j = 0
+
     Event =  random.choice(randEvent)
 
     print("theres", Event)
-
 
     if Event == "Roadworks":
         while j == 0:
@@ -103,10 +99,10 @@ while h == 0:
                 print ("Going around")
 
                 choice_4a = str(input("The police officer sees you, and starts chasing you, would you pull over, or run"))
-
+                #Fix from here
+                
                 while j==0:
-                    choice_4 = str(input("Would you turn back, or go around?"))
-                    if choice_4b == "pull over":
+                    if choice_4a == "pull over":
                        print ("The police offiver asks for you Licence and Registration")
                        if a == 1:
                            print("You have a licence")
@@ -115,9 +111,22 @@ while h == 0:
                                 print("You are free to go!")
                                 j += 1
 
-                           if a != 1 and b != 1:
+                       if a != 1 and b != 1:
                             print("game over! Your arrested")
                             j += 1
+                            h += 1
+
+                    if choice_4a == "Run":
+                        random.choice(RandEventPolice)
+                        if RandEventPolice == "Caught":
+                            print("Game Over, you got caught!")
+                            j += 1
+                            h += 1
+                        
+                        if RandEventPolice == "Escaped":
+                            print("You escaped!")
+                            j += 1
+                        
 
     if Event == "Hitch-hiker":
         print("This event is coming soon")
