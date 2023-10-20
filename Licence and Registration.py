@@ -141,7 +141,6 @@ while h == 0:
                             print("You escaped!")
                             j += 1
                         
-
     if Event == "Hitch-hiker":
         print("This event is coming soon")
 
