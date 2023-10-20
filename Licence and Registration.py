@@ -4,7 +4,7 @@ a = 0
 b = 0
 m = int(500)
 RandEvent = ["Hitch-hiker", "Police", "Roadwork", "Traffic", "Nothing"]
-RandEventPolice = ["Caught", "Escaped"] #wrote the list as ["Cuaght, Escaped"] which messed up my whole code
+RandEventPolice = ["Caught", "Escaped"] #Wrote the list as ["Cuaght, Escaped"] which messed up my whole code
 print ("you have", m, "money")
 
 while i==0:
@@ -126,9 +126,9 @@ while h == 0:
                             j += 1
                             h += 1
 
-                    if choice_4a == "run":
+                    if choice_4a == "run": #Broken area of code
 
-                        PoliceEvent = random.choice(RandEventPolice) #printed RandEventPolice instead of choosing a string
+                        PoliceEvent = random.choice(RandEventPolice) #Printed RandEventPolice instead of choosing a string
 
                         #PoliceEvent didn't work
                         
