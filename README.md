@@ -1,4 +1,4 @@
 # Licence-and-Registration
-v1.4.2
+v1.4.3
 
-#commenting cleanup
+added all .lower() methods on all user inputs

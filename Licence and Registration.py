@@ -8,10 +8,10 @@ RandEventPolice = ["Caught", "Escaped"] #Wrote the list as ["Cuaght, Escaped"] w
 print ("you have", m, "money")
 
 while i==0:
-    choice_1a = str(input("Do uou want to buy a licencse?"))
+    choice_1a = str(input("Do you want to buy a licencse?")).lower()
 
     if choice_1a == "yes" and a == 0:
-        choice_1b = str(input("600 money"))
+        choice_1b = str(input("600 money")).lower()
         
         if m < 300:
             print ("Not enough money")
@@ -79,7 +79,7 @@ while h == 0:
 
     if Event == "Roadwork":
         while j == 0:
-            choice_4 = str(input("Would you turn back, go through, or go around?"))
+            choice_4 = str(input("Would you turn back, go through, or go around?")).lower()
             if choice_4 == "turn back":
                 print ("Turning Back")
                 j += 1
@@ -94,7 +94,7 @@ while h == 0:
 
     if Event == "Police":
         while j == 0:
-            choice_4 = str(input("Would you turn back, go through, or go around?"))
+            choice_4 = str(input("Would you turn back, go through, or go around?")).lower()
             if choice_4 == "turn back":
                 print ("Turning Back")
                 j += 1
@@ -105,7 +105,7 @@ while h == 0:
 
             if choice_4 == "go through":
                 print ("Going through")
-                choice_4a = str(input("The police officer sees you, and starts chasing you, would you pull over, or run"))       
+                choice_4a = str(input("The police officer sees you, and starts chasing you, would you pull over, or run")).lower()      
                 while j==0:
                     if choice_4a == "pull over":
                        print ("The police offiver asks for you Licence and Registration")
@@ -146,7 +146,7 @@ while h == 0:
 
     if Event == "Traffic":
         while j == 0:
-            choice_4 = str(input("Would you turn back, go through, or go around?"))
+            choice_4 = str(input("Would you turn back, go through, or go around?")).lower()
             if choice_4 == "turn back":
                 print ("Turning Back")
                 j += 1
