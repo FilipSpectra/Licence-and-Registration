@@ -77,15 +77,19 @@ while h == 0:
 
     print("theres", Event)
 
-    if Event == "Roadworks":
+    if Event == "Roadwork":
         while j == 0:
-            choice_4 = str(input("Would you turn back, or go around?"))
+            choice_4 = str(input("Would you turn back, go through, or go around?"))
             if choice_4 == "turn back":
                 print ("Turning Back")
                 j += 1
 
             if choice_4 == "go around":
-                print ("Unable go around, try again")
+                print ("going around")
+                j += 1
+
+            if choice_4 == "go through":
+                print ("Unable go through, try again")
                 j += 0
 
     if Event == "Police":
@@ -96,7 +100,11 @@ while h == 0:
                 j += 1
 
             if choice_4 == "go around":
-                print ("Going around")
+                print ("going around")
+                j += 1
+
+            if choice_4 == "go through":
+                print ("Going through")
 
                 choice_4a = str(input("The police officer sees you, and starts chasing you, would you pull over, or run"))
                 #Fix from here
@@ -138,9 +146,17 @@ while h == 0:
                 print ("Turning Back")
                 j += 1
 
-            if choice_4 == "go around":
-                print ("Unable go around, try again")
+            if choice_4 == "go through":
+                print ("Unable go through, try again")
                 j += 0
+
+            if choice_4 == "go around":
+                print ("going around")
+                j += 1
+
+
+
+            
 
     if Event == "Nothing":
         print ("Nothing there carrying on")
