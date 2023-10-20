@@ -1,4 +1,4 @@
 # Licence-and-Registration
-v1.4.0
+v1.4.1
 
-#fixed police event
+#police event cleanup

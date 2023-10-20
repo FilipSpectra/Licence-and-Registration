@@ -74,9 +74,6 @@ while h == 0:
     j = 0
 
     Event =  random.choice(RandEvent)
-    
-    PoliceEvent = random.choice(RandEventPolice) #printed RandEventPolice instead of choosing a string
-    print(PoliceEvent)
 
     print("theres", Event)
 
@@ -130,6 +127,8 @@ while h == 0:
                             h += 1
 
                     if choice_4a == "run":
+
+                        PoliceEvent = random.choice(RandEventPolice) #printed RandEventPolice instead of choosing a string
 
                         #PoliceEvent didn't work
                         
