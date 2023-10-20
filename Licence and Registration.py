@@ -3,8 +3,8 @@ i = 0
 a = 0
 b = 0
 m = int(500)
-randEvent = ["Hitch-hiker", "Police", "Roadwork", "Traffic", "Nothing"]
-RandEventPolice = ["Caught, Escaped"]
+RandEvent = ["Hitch-hiker", "Police", "Roadwork", "Traffic", "Nothing"]
+RandEventPolice = ["Caught", "Escaped"] #wrote the list as ["Cuaght, Escaped"] which messed up my whole code
 print ("you have", m, "money")
 
 while i==0:
@@ -37,13 +37,13 @@ while i==0:
     choice_2a = str(input("Do you want to buy registaration?")).lower()
 
     if choice_2a == "yes" and b == 0:
-        choice_2b = str(input("600 money")).lower()
+        choice_2b = str(input("800 money")).lower()
         if choice_2b == "yes":
-            if m < 600:
+            if m < 800:
                 print ("Not enough money")
                 
             else:
-                m -= 600
+                m -= 800
                 print ("you have", m, "money remaining")
                 
         elif b > 0:
@@ -73,7 +73,10 @@ h = 0
 while h == 0:
     j = 0
 
-    Event =  random.choice(randEvent)
+    Event =  random.choice(RandEvent)
+    
+    PoliceEvent = random.choice(RandEventPolice) #printed RandEventPolice instead of choosing a string
+    print(PoliceEvent)
 
     print("theres", Event)
 
@@ -94,7 +97,7 @@ while h == 0:
 
     if Event == "Police":
         while j == 0:
-            choice_4 = str(input("Would you turn back, or go around?"))
+            choice_4 = str(input("Would you turn back, go through, or go around?"))
             if choice_4 == "turn back":
                 print ("Turning Back")
                 j += 1
@@ -105,10 +108,7 @@ while h == 0:
 
             if choice_4 == "go through":
                 print ("Going through")
-
-                choice_4a = str(input("The police officer sees you, and starts chasing you, would you pull over, or run"))
-                #Fix from here
-                
+                choice_4a = str(input("The police officer sees you, and starts chasing you, would you pull over, or run"))       
                 while j==0:
                     if choice_4a == "pull over":
                        print ("The police offiver asks for you Licence and Registration")
@@ -119,19 +119,26 @@ while h == 0:
                                 print("You are free to go!")
                                 j += 1
 
+                           if a != 1 and b != 1:
+                                print("game over! You got arrested")
+                                j += 1
+                                h += 1
+
                        if a != 1 and b != 1:
                             print("game over! Your arrested")
                             j += 1
                             h += 1
 
-                    if choice_4a == "Run":
-                        random.choice(RandEventPolice)
-                        if RandEventPolice == "Caught":
+                    if choice_4a == "run":
+
+                        #PoliceEvent didn't work
+                        
+                        if PoliceEvent == "Caught":
                             print("Game Over, you got caught!")
                             j += 1
                             h += 1
                         
-                        if RandEventPolice == "Escaped":
+                        if PoliceEvent == "Escaped":
                             print("You escaped!")
                             j += 1
                         
@@ -141,7 +148,7 @@ while h == 0:
 
     if Event == "Traffic":
         while j == 0:
-            choice_4 = str(input("Would you turn back, or go around?"))
+            choice_4 = str(input("Would you turn back, go through, or go around?"))
             if choice_4 == "turn back":
                 print ("Turning Back")
                 j += 1
