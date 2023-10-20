@@ -158,11 +158,7 @@ while h == 0:
 
             if choice_4 == "go around":
                 print ("going around")
-                j += 1
-
-
-
-            
+                j += 1         
 
     if Event == "Nothing":
         print ("Nothing there carrying on")
