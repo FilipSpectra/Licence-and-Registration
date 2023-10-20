@@ -1,4 +1,6 @@
 # Licence-and-Registration
-v1.4.3
+v1.5.0
 
-added all .lower() methods on all user inputs
+Made it so if the user loses the game, they have a choice
+if they want to restart or not, and if they type "yes" it
+will restart the entire code ultimatly starting a new game.
